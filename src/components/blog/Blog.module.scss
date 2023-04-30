@@ -2,7 +2,6 @@
 @import "@/styles/variables";
 
 
-
 .section {
    padding-bottom: 58px;
 
@@ -17,9 +16,6 @@
       grid-template-areas: "box-1 box-2"
    }
 
-   // @include media("desktop") {
-   //    grid-template-columns: 670px 690px;
-   // }
 }
 
 .img {
@@ -27,7 +23,6 @@
    height: auto;
 
    @include media("tablet") {
-      // width: auto;
       height: 100%;
       object-fit: cover;
       grid-area: box-2;
@@ -48,8 +43,6 @@
       flex-direction: column;
       justify-content: center;
       max-width: 400px;
-      // width: 400px;
-
    }
 
    @include media("desktop") {
@@ -58,13 +51,13 @@
    }
 
    p {
+      width: 280px;
       font-size: 16px;
       line-height: 1.36;
-      width: 280px;
 
       @include media("tablet") {
-         font-size: 18px;
          width: auto;
+         font-size: 18px;
       }
    }
 
@@ -82,15 +75,14 @@
    }
 
    a {
-      margin-top: 24px;
       display: block;
-
-
+      margin-top: 24px;
       padding: 16px 32px;
       width: max-content;
 
       font-size: 16px;
       line-height: 1.36;
+
       background-color: transparent;
       border-radius: 5px;
       border: 1px solid $primary-bg-color;

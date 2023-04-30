@@ -1,6 +1,7 @@
-import Image from "next/image";
-import styles from "./About.module.scss";
 import Link from "next/link";
+import Image from "next/image";
+
+import styles from "./About.module.scss";
 
 export const About = () => {
 	return (

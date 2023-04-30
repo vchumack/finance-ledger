@@ -1,7 +1,7 @@
-import { useMediaQuery } from "react-responsive";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Link from "next/link";
 import Image from "next/image";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { useMediaQuery } from "react-responsive";
 import { navbar } from "@/data/header";
 import { useAddClassOnScroll } from "@/helpers/hooks/useAddClassOnScroll";
 

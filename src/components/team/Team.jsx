@@ -1,10 +1,10 @@
+import Link from "next/link";
 import Image from "next/image";
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { TfiLinkedin } from "react-icons/tfi";
 import { team } from "@/data/team";
 
 import styles from "./Team.module.scss";
-import Link from "next/link";
 
 export const Team = () => {
 	return (

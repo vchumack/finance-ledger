@@ -13,13 +13,11 @@
 
    background-color: transparent;
 
-
    @include media("tablet") {
       height: 70px;
    }
 
    .container {
-      // padding-top: 22px;
       @include flex(center);
       flex-direction: column;
       gap: 16px;
@@ -29,10 +27,6 @@
          justify-content: space-between;
          align-items: center;
       }
-
-      @include media("desktop") {
-         // padding-top: 32px;
-      }
    }
 
 }
@@ -41,7 +35,6 @@
 
 .logoBox {
    @include flex(_, center);
-   // margin-bottom: 16px;
 
    transition: $transition;
 
@@ -83,8 +76,6 @@
    &::after {
       content: '';
       position: absolute;
-      // bottom: -8px;
-      // left: -10px;
       bottom: -15%;
       left: -10%;
       width: 120%;

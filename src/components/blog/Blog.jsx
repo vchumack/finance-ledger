@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { navbar } from "@/data/header";
+import Link from "next/link";
 
 import styles from "./Blog.module.scss";
-import Link from "next/link";
 
 export const Blog = () => {
 	return (

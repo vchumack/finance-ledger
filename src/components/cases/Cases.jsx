@@ -1,10 +1,8 @@
 import Image from "next/image";
 import { useEffect } from "react";
-import styles from "./Cases.module.scss";
-
-// import "jquery";
-
 import { cases } from "@/data/cases";
+
+import styles from "./Cases.module.scss";
 
 export const Cases = () => {
 	useEffect(() => {

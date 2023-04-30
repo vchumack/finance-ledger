@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { TfiLinkedin } from "react-icons/tfi";
+
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {

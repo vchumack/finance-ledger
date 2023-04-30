@@ -1,6 +1,5 @@
-import Image from "next/image";
-import styles from "./Hero.module.scss";
 import Link from "next/link";
+import styles from "./Hero.module.scss";
 
 export const Hero = () => {
 	return (

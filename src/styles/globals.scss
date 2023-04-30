@@ -110,7 +110,6 @@ a {
 }
 
 
-
 // ИНПУТ Стирание стилей при автозаполнении
 :-webkit-autofill {
   transition: all 5000s ease-in-out 0s;
@@ -130,8 +129,6 @@ a {
 .container {
   margin: 0px auto;
   padding: 0px 20px;
-  // width: 100%;
-  // width: 280px;
   max-width: 767.9px;
 
 
@@ -149,7 +146,7 @@ a {
 
 body.scroll header {
   opacity: 0.8;
-  background-color: rgba(0, 0, 0, 0.616);
+  background-color: $hero-bg-color;
 }
 
 div .lb-dataContainer {
