@@ -4,14 +4,14 @@ import { ThreeDots } from "react-loader-spinner";
 
 import styles from "./Contact.module.scss";
 
-const encode = (data) => {
-	return Object.keys(data)
-		.map(
-			(key) =>
-				encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-		)
-		.join("&");
-};
+// const encode = (data) => {
+// 	return Object.keys(data)
+// 		.map(
+// 			(key) =>
+// 				encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+// 		)
+// 		.join("&");
+// };
 
 export const Contact = () => {
 	const {
@@ -24,13 +24,7 @@ export const Contact = () => {
 	});
 
 	const onSubmit = async (data) => {
-		fetch("/", {
-			method: "POST",
-			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			body: encode({ "form-name": "contact", ...data }),
-		})
-			.then((res) => {})
-			.catch((error) => console.log(error));
+		console.log(data);
 	};
 
 	return (
@@ -48,6 +42,7 @@ export const Contact = () => {
 					className={styles.form}
 					onSubmit={handleSubmit(onSubmit)}
 					name="contact"
+					method="POST"
 					data-netlify="true"
 					data-netlify-honeypot="bot-field"
 				>
