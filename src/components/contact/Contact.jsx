@@ -29,10 +29,7 @@ export const Contact = () => {
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
 			body: encode({ "form-name": "contact", ...data }),
 		})
-			.then((res) => {
-				console.log(res);
-				reset();
-			})
+			.then((res) => {})
 			.catch((error) => console.log(error));
 	};
 
