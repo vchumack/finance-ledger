@@ -16,7 +16,17 @@ export const Contact = () => {
 
 	const onSubmit = async (data) => {
 		console.log(data);
-		reset();
+
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: encode({ "form-name": "contact", ...data }),
+		})
+			.then((res) => {
+				console.log(res);
+				reset();
+			})
+			.catch((error) => alert(error));
 
 		// try {
 		// 	await axios.post(
@@ -43,8 +53,9 @@ export const Contact = () => {
 				<h2>Request Callback</h2>
 				<form
 					className={styles.form}
+					onSubmit={handleSubmit(onSubmit)}
 					name="contact"
-					method="post"
+					// method="post"
 					data-netlify="true"
 					data-netlify-honeypot="bot-field"
 				>
@@ -119,8 +130,7 @@ export const Contact = () => {
 						<button
 							// disabled={!isValid}
 							className={styles.button}
-							onClick={handleSubmit(onSubmit)}
-							type="button"
+							type="submit"
 						>
 							Send
 						</button>
