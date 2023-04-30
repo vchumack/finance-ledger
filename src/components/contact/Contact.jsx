@@ -24,8 +24,6 @@ export const Contact = () => {
 	});
 
 	const onSubmit = async (data) => {
-		console.log(data);
-
 		fetch("/", {
 			method: "POST",
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -35,18 +33,7 @@ export const Contact = () => {
 				console.log(res);
 				reset();
 			})
-			.catch((error) => alert(error));
-
-		// try {
-		// 	await axios.post(
-		// 		"https://sheet.best/api/sheets/fa25e0b1-b286-4206-a717-6aae8e6e9049",
-		// 		data
-		// 	);
-
-		// 	reset();
-		// } catch (error) {
-		// 	console.log(error);
-		// }
+			.catch((error) => console.log(error));
 	};
 
 	return (
@@ -64,7 +51,6 @@ export const Contact = () => {
 					className={styles.form}
 					onSubmit={handleSubmit(onSubmit)}
 					name="contact"
-					// method="post"
 					data-netlify="true"
 					data-netlify-honeypot="bot-field"
 				>
@@ -145,7 +131,7 @@ export const Contact = () => {
 						</button>
 					)}
 
-					{/* {isSubmitSuccessful && (
+					{isSubmitSuccessful && (
 						<div className={styles.successBox}>
 							<div>
 								<p className={styles.successTitle}>
@@ -166,7 +152,7 @@ export const Contact = () => {
 								</button>
 							</div>
 						</div>
-					)} */}
+					)}
 				</form>
 			</div>
 		</section>
