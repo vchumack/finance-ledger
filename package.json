@@ -24,6 +24,7 @@
     "react-loader-spinner": "^5.3.4",
     "react-responsive": "^9.0.2",
     "react-scroll": "^1.8.9",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "sharp": "^0.32.1"
   }
 }

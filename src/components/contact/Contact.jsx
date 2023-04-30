@@ -126,7 +126,7 @@ export const Contact = () => {
 						</button>
 					)}
 
-					{isSubmitSuccessful && (
+					{/* {isSubmitSuccessful && (
 						<div className={styles.successBox}>
 							<div>
 								<p className={styles.successTitle}>
@@ -147,7 +147,7 @@ export const Contact = () => {
 								</button>
 							</div>
 						</div>
-					)}
+					)} */}
 				</form>
 			</div>
 		</section>
