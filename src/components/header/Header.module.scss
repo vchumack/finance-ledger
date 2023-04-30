@@ -1,0 +1,122 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+.header {
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   height: 120px;
+   z-index: 100;
+
+   @include flex(center, center);
+
+   background-color: transparent;
+
+
+   @include media("tablet") {
+      height: 70px;
+   }
+
+   .container {
+      // padding-top: 22px;
+      @include flex(center);
+      flex-direction: column;
+      gap: 16px;
+
+      @include media("tablet") {
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      @include media("desktop") {
+         // padding-top: 32px;
+      }
+   }
+
+}
+
+
+
+.logoBox {
+   @include flex(_, center);
+   // margin-bottom: 16px;
+
+   transition: $transition;
+
+   &:hover,
+   &:focus {
+      transform: scale(1.02);
+   }
+}
+
+.logoText {
+   margin-left: 8px;
+   font-size: 28px;
+   line-height: 0.29;
+
+   color: $primary-text-color;
+
+   span {
+      color: $accent-color;
+   }
+}
+
+
+.list {
+   @include flex(_, center);
+   gap: 12px;
+
+   @include media("tablet") {
+      gap: 20px;
+   }
+
+   @include media("desktop") {
+      gap: 40px;
+   }
+}
+
+.item {
+   position: relative;
+
+   &::after {
+      content: '';
+      position: absolute;
+      // bottom: -8px;
+      // left: -10px;
+      bottom: -15%;
+      left: -10%;
+      width: 120%;
+      height: 2px;
+      background-color: $accent-color;
+      transform: scaleY(0);
+      transition: $transition;
+
+      @include media("desktop") {
+         bottom: -20%;
+         left: -20%;
+         width: 140%;
+         height: 3px;
+      }
+   }
+
+   &:hover::after,
+   &:focus::after {
+      transform: scaleY(1);
+   }
+
+
+   a {
+      font-size: 16px;
+      line-height: 1.36;
+
+      @include media("tablet") {
+         font-size: 18px;
+      }
+
+      @include media("desktop") {
+         font-size: 18px;
+      }
+   }
+}

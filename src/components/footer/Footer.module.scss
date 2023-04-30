@@ -1,0 +1,39 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+.footer {
+   @include flex(center, center);
+   flex-direction: column;
+   padding: 20px 30px;
+
+   background-color: $dark-bg-color;
+   color: $primary-bg-color;
+
+   p {
+      font-size: 15px;
+      line-height: 1.36;
+
+      @include media("tablet") {
+         font-size: 18px;
+      }
+
+   }
+
+}
+
+.list {
+   @include flex(center, center);
+   margin-bottom: 12px;
+   gap: 25px;
+
+   svg {
+      width: 35px;
+      height: 35px;
+      transition: $transition;
+
+      &:hover,
+      &:focus {
+         fill: $accent-color;
+      }
+   }
+}

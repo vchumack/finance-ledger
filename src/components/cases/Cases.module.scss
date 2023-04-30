@@ -1,0 +1,72 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+
+.section {
+   padding-top: 56px;
+   padding-bottom: 40px;
+
+
+}
+
+
+.container {
+
+
+   p {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 16px;
+      line-height: 1.37;
+
+      @include media("tablet") {
+         font-size: 18px;
+      }
+
+      @include media("desktop") {}
+   }
+
+   h2 {
+
+      width: 219px;
+      text-align: center;
+      margin: 16px auto 24px auto;
+      font-size: 32px;
+      line-height: 1.37;
+
+      @include media("tablet") {
+         width: 300px;
+         font-size: 40px;
+      }
+
+      @include media("desktop") {}
+   }
+
+}
+
+.list {
+   margin-top: 31px;
+
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-gap: 8px;
+
+   @include media("tablet") {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 18px;
+   }
+
+
+}
+
+
+.img {
+   width: 100%;
+   height: auto;
+
+   // @include media("tablet") {
+   //    width: 223px;
+   //    height: 148px;
+   // }
+}
